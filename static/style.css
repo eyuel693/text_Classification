@@ -1,0 +1,87 @@
+/* static/style.css */
+
+/* Style for author's name */
+.author {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #333;
+}
+
+h4 {
+    font-weight: normal;
+    color: #666;
+}
+
+.similarity-results {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.similarity-results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.similarity-results li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.similarity-results strong {
+    color: #007bff;
+}

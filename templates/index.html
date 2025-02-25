@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Classification - By Eyuel Nigussie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Classification App</h1>
+        <p class="author">Developed by <strong>Eyuel Nigussie</strong></p>
+
+        <form method="POST">
+            <input type="text" name="query" placeholder="Enter text to classify..." required>
+            <br>
+            <button type="submit">Classify</button>
+        </form>
+
+        {% if classification %}
+            <div class="result">
+                <p><strong>Predicted Category:</strong> {{ classification }}</p>
+            </div>
+        {% endif %}
+
+        {% if accuracy is not none %}
+            <p class="accuracy">Model Accuracy: {{ "%.4f"|format(accuracy) }}</p>
+        {% endif %}
+
+        {% if similarities %}
+            <div class="similarity-results">
+                <h3>Top 3 Most Similar Documents:</h3>
+                <ul>
+                    {% for res in similarities %}
+                        <li>
+                            <strong>Document:</strong> {{ res.document[:6] }}... 
+                            <strong>Category:</strong> {{ res.category[:6] }} 
+                            <strong>Similarity Score:</strong> {{ "%.4f"|format(res.similarity_score) }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Eyuel Nigussie. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
